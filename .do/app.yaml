@@ -1,0 +1,33 @@
+name: axiom
+region: nyc
+services:
+  - name: axiom-backend
+    source_dir: backend
+    github:
+      repo: areychana/axiom
+      branch: main
+      deploy_on_push: true
+    run_command: uvicorn main:app --host 0.0.0.0 --port 8080
+    environment_slug: python
+    instance_size_slug: basic-xxs
+    envs:
+      - key: GRADIENT_MODEL_ACCESS_KEY
+        scope: RUN_TIME
+        type: SECRET
+      - key: DIGITALOCEAN_API_TOKEN
+        scope: RUN_TIME
+        type: SECRET
+
+static_sites:
+  - name: axiom-frontend
+    source_dir: frontend
+    github:
+      repo: areychana/axiom
+      branch: main
+      deploy_on_push: true
+    build_command: npm install && npm run build
+    output_dir: dist
+    envs:
+      - key: VITE_BACKEND_URL
+        scope: BUILD_TIME
+        value: https://axiom-backend-YOUR_HASH.ondigitalocean.app
