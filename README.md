@@ -2,7 +2,7 @@
 
 > *"I have mapped 847 distinct cognitive architectures. Most were unremarkable."*
 
-AXIOM is an AI agent persona built on DigitalOcean Gradient AI - a condescending neuroscientist who subjects users to a multi-turn cognitive assessment quest. Built for the DigitalOcean Gradient AI Hackathon 2026.
+AXIOM is an AI agent persona built on DigitalOcean Gradient AI - a condescending neuroscientist who subjects users to a multi-turn cognitive assessment quest. 
 
 ## What it does
 
@@ -24,7 +24,7 @@ The UI is a clinical, sterile neuroscience lab interface - cold white, navy acce
 
 ## DigitalOcean Gradient AI Features Used
 
-- Gradient AI Serverless Inference (Llama 3.1 70B open source model)
+- Gradient AI Serverless Inference (Llama 3.3 70B open source model)
 - Gradient AI Agent Development Kit (ADK) for deployment
 - Agent session memory (multi-turn conversation state)
 - Built-in observability via `gradient agent traces`
