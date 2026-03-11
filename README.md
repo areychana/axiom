@@ -17,7 +17,7 @@ The UI is a clinical, sterile neuroscience lab interface - cold white, navy acce
 
 ## Tech Stack
 
-- **AI Agent**: DigitalOcean Gradient AI Platform (ADK) + Llama 3.1 70B via serverless inference
+- **AI Agent**: DigitalOcean Gradient AI Platform (ADK) + Llama 3.3 70B via serverless inference
 - **Backend**: FastAPI (Python) - session memory, Gradient API routing
 - **Frontend**: React + Vite - clinical UI with canvas neural animation
 - **Deployment**: DigitalOcean App Platform
